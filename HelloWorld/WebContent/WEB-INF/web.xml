@@ -7,5 +7,7 @@
         <servlet-name>hs</servlet-name>
         <url-pattern>/hello</url-pattern>
         </servlet-mapping>
-        <welcome-file-list>hello.html</welcome-file-list>
+        <welcome-file-list>
+        <welcome-file>hello.html</welcome-file>
+        </welcome-file-list>
 </web-app>
