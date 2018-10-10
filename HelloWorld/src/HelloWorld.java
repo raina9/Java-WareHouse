@@ -1,4 +1,5 @@
-import java.servlet.*;
+import javax.servlet.*;
+import java.io.*;
 public class HelloWorld implements Servlet
 {
 public void init(ServletConfig sc)throws ServletException
@@ -9,7 +10,7 @@ public ServletConfig getServletConfig()
 {
 return null;
 }
-public void service(ServletRequest req,ServletResponse res) 
+public void service(ServletRequest req,ServletResponse res) throws IOException
 {
 //read data
 //generate output
