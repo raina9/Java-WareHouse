@@ -1,0 +1,14 @@
+<web-app>
+<display-name>ServletLifeCycle</display-name>
+<welcome-file-list>
+<welcome-file>Registration.html</welcome-file>
+</welcome-file-list>
+<servlet>
+<servlet-name>Reg</servlet-name>
+<servlet-class>RegistrationServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>Reg</servlet-name>
+<url-pattern>/RegServlet</url-pattern>
+</servlet-mapping>
+</web-app>
