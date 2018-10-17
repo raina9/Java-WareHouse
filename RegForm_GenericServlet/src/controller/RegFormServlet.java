@@ -15,10 +15,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 public class RegFormServlet extends GenericServlet {
-    res.setContentType("text/html");
-	PrintWriter out = res.getWriter();
-    public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+   public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+	   res.setContentType("text/html");
+		PrintWriter out = res.getWriter();
 	int id=Integer.parseInt(req.getParameter("id"));
 	String name=req.getParameter("name");
 	String email=req.getParameter("email");
