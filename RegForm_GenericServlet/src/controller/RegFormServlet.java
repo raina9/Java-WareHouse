@@ -15,7 +15,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 
 public class RegFormServlet extends GenericServlet {
-   public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
+  
+	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 	   res.setContentType("text/html");
 		PrintWriter out = res.getWriter();
