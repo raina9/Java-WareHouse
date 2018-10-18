@@ -1,8 +1,6 @@
 <web-app>
        <display-name>RegForm_GenericServlet</display-name>
-       <welcome-file-list>
-       <welcome-file>RegistrationForm.html</welcome-file>
-       </welcome-file-list>
+       
        <servlet>
                 <display-name>RegFormServlet</display-name>
                 <servlet-name>rf</servlet-name>
@@ -12,4 +10,7 @@
                                   <servlet-name>rf</servlet-name>
                                   <url-pattern>/reg</url-pattern>
                   </servlet-mapping>
+                  <welcome-file-list>
+                  <welcome-file>RegistrationForm.html</welcome-file>
+                  </welcome-file-list>
 </web-app>
