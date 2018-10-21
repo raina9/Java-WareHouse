@@ -16,7 +16,7 @@ public class RegFormServlet extends GenericServlet {
   
 	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	   res.setContentType("text/html");
+	    res.setContentType("text/html");
 		PrintWriter out = res.getWriter();
 	int id=Integer.parseInt(req.getParameter("id"));
 	String name=req.getParameter("name");
@@ -27,7 +27,7 @@ public class RegFormServlet extends GenericServlet {
 	{
 	Class.forName("com.mysql.jdbc.cj.Driver");
 	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/avengers", "root","Shivendr@786");
-	PreparedStatement pst=con.prepareStatement("insert into studentServ values(?,?,? )");
+	PreparedStatement pst=con.prepareStatement("insert into StudentDetail values(?,?,?,?)");
 	pst.setInt(1, id);
 	pst.setString(2, name);
 	pst.setString(3,email);
