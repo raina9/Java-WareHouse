@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>StudentCourseReg_UsingContextAndConfig</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+ 
+  <servlet>
+  <display-name>StudentRegServlet</display-name>
+  <servlet-name>StudentRegServlet</servlet-name>
+  <servlet-class>controller.StudentRegServlet</servlet-class>
+  <init-param>
+  <param-name>username</param-name>
+  <param-value>root</param-value>
+  </init-param>
+  <init-param>
+  <param-name>password</param-name>
+  <param-value>Shivendr@786</param-value>
+  </init-param>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>StudentRegServlet</servlet-name>
+  <url-pattern>/stdreg</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  <display-name>CourseRegServlet</display-name>
+  <servlet-name>CourseRegServlet</servlet-name>
+  <servlet-class>controller.CourseRegServlet</servlet-class>
+  <init-param>
+  <param-name>username</param-name>
+  <param-value>test</param-value>
+  </init-param>
+  <init-param>
+  <param-name>password</param-name>
+  <param-value>test</param-value>
+  </init-param>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>CourseRegServlet</servlet-name>
+  <url-pattern>/crsreg</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>
+  <param-name>driver</param-name>
+  <param-value>com.mysql.cj.jdbc.Driver</param-value>
+  </context-param>
+  <context-param>
+  <param-name>url</param-name>
+  <param-value>jdbc:mysql://localhost:3306/college</param-value>
+  </context-param>
+</web-app>

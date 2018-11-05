@@ -25,7 +25,7 @@ public class RegFormServlet extends GenericServlet {
 	
 	try
 	{
-	Class.forName("com.mysql.jdbc.cj.Driver");
+	Class.forName("com.mysql.cj.jdbc.Driver");
 	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/avengers", "root","Shivendr@786");
 	PreparedStatement pst=con.prepareStatement("insert into StudentDetail values(?,?,?,?)");
 	pst.setInt(1, id);
@@ -35,7 +35,7 @@ public class RegFormServlet extends GenericServlet {
 	int i=pst.executeUpdate();
 	if(i!=0)
 	{
-		out.println("<font color='blue'><h1>Reg Success:)</h1></font>");
+		out.println("<font color='Blue'><h1>Reg Success:)</h1></font>");
 	}
 	else
 		out.println("<font color='Red'><h1>Reg Fail(:</h1></font>");
@@ -43,7 +43,7 @@ public class RegFormServlet extends GenericServlet {
 	catch(Exception e)
 	{
 		out.println("<font color='Red'><h1>"+e.getMessage()+"(:</h1></font>");
+		e.printStackTrace();
 	}
-	}
-
+    }
 }
