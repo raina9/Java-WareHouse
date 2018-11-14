@@ -8,6 +8,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -19,8 +20,10 @@ public class CourseRegServlet extends GenericServlet {
    		ServletContext scxt=config.getServletContext();
    	    String driver=scxt.getInitParameter("driver");
    	    String url=scxt.getInitParameter("url");
-   		String username=config.getInitParameter("username");
+   		
+   	    String username=config.getInitParameter("username");
    		String password=config.getInitParameter("password");
+   		
    		System.out.println("course user = "+username);
    		System.out.println("course password = "+password);
    		
@@ -34,13 +37,13 @@ public class CourseRegServlet extends GenericServlet {
    	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
    		PrintWriter out =res.getWriter();
-   		
-   		int cid = Integer.parseInt(req.getParameter("id"));
-   		String cname=req.getParameter("name");
+   		int cid = Integer.parseInt(req.getParameter("cid"));
+   		String cname=req.getParameter("cname");
    		int fee=Integer.parseInt(req.getParameter("fee"));
-	 try {
-   	   PreparedStatement pst = con.prepareStatement("insert into student values(?,?,?)");
-       	 pst.setInt(1, cid);
+	 
+   		try {
+   	     PreparedStatement pst = con.prepareStatement("insert into course values(?,?,?)");
+       	 pst.setInt(1,cid);
        	 pst.setString(2,cname);
        	 pst.setInt(3,fee);
        	 int i=pst.executeUpdate();
@@ -52,18 +55,20 @@ public class CourseRegServlet extends GenericServlet {
 	 }
 	 catch(Exception e) {
 		 out.println("exception aya :<"+e.getMessage());
+		 e.printStackTrace();
 		}
 	 }
+   	
    	@Override
    	public void destroy() {
    		// TODO Auto-generated method stub
    		try {
    			con.close();
-   		}
+   	     	}
    		catch(Exception e) 
-   		{
+   		    {
    			e.getMessage();
-   		}
+   	    	}
    	}
 
 }

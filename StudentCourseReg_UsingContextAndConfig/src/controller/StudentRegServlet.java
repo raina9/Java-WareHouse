@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -42,23 +43,31 @@ public class StudentRegServlet extends GenericServlet {
     	int id = Integer.parseInt(req.getParameter("id"));
    		String name=req.getParameter("name");
    		String email=req.getParameter("email");
-	 try {
-   	   PreparedStatement pst=con.prepareStatement("insert into course values(?,?,?)");
-       	 pst.setInt(1,id);
+	
+   		try {
+   	    PreparedStatement pst=con.prepareStatement("insert into student values(?,?,?)");
+       	 
+   	     pst.setInt(1,id);
        	 pst.setString(2,name);
        	 pst.setString(3,email);
+       	
        	 int i=pst.executeUpdate();
+       	 
        	 if(i!=0) {
        		 out.println("student Reg success :)");
        	 }
+       	 
        	 else
        		 out.println("student Reg fail :<");
 	 }
-	 catch(Exception e) {
+	 
+   		catch(Exception e) {
 		 out.println("exception aya :<"+e.getMessage());
-		}
+		e.printStackTrace();
+   		}
     }
-	 public void destroy() {
+	 
+    public void destroy() {
 	   		// TODO Auto-generated method stub
 	   		try {
 	   			con.close();
