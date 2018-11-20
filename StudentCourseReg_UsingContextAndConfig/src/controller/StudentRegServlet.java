@@ -40,9 +40,9 @@ public class StudentRegServlet extends GenericServlet {
     public void service(ServletRequest req,ServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
     	PrintWriter out =res.getWriter();
-    	int id = Integer.parseInt(req.getParameter("id"));
-   		String name=req.getParameter("name");
-   		String email=req.getParameter("email");
+    	int id = Integer.parseInt(req.getParameter("ID"));
+   		String name=req.getParameter("NAME");
+   		String email=req.getParameter("EMAIL");
 	
    		try {
    	    PreparedStatement pst=con.prepareStatement("insert into student values(?,?,?)");

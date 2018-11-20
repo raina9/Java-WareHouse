@@ -37,9 +37,9 @@ public class CourseRegServlet extends GenericServlet {
    	public void service(ServletRequest req, ServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
    		PrintWriter out =res.getWriter();
-   		int cid = Integer.parseInt(req.getParameter("cid"));
-   		String cname=req.getParameter("cname");
-   		int fee=Integer.parseInt(req.getParameter("fee"));
+   		int cid = Integer.parseInt(req.getParameter("CID"));
+   		String cname=req.getParameter("CNAME");
+   		int fee=Integer.parseInt(req.getParameter("FEE"));
 	 
    		try {
    	     PreparedStatement pst = con.prepareStatement("insert into course values(?,?,?)");

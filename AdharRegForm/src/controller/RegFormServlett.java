@@ -14,7 +14,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 public class RegFormServlett extends HttpServlet {
-		protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession hs = req.getSession();
         PrintWriter out = res.getWriter();
@@ -76,11 +77,11 @@ public class RegFormServlett extends HttpServlet {
             	  out.println("NAME="+name);
             	  out.println("FNAME="+fname);
             	  out.println("MNAME="+mname);
-            	  out.println("CONTACT"+contact);
-            	  out.println("EMAIL"+email);
-            	  out.println("ADDRESS"+address);
-            	  out.println("QUAL"+qual);
-            	  out.println("PER"+per);
+            	  out.println("CONTACT="+contact);
+            	  out.println("EMAIL="+email);
+            	  out.println("ADDRESS="+address);
+            	  out.println("QUAL="+qual);
+            	  out.println("PER="+per);
             	  out.println("</pre>");
             	  }
               else {
@@ -90,9 +91,8 @@ public class RegFormServlett extends HttpServlet {
            }
            catch(Exception e) {
         	   out.println(e.getMessage());
+        	   e.printStackTrace();
            }
-        
-        
         }
 	 }
 }
