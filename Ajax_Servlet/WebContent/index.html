@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajax-Servlet</title>
+<!-- adding jquery api -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
+<!-- <form action ="./reg"> is not used here we will go for Form ID -->
+<form id="myform">
+<pre>
+NAME    : <input type = "text" name = "name"  id = "name"  />
+EMAIL   : <input type = "text" name = "email" id = "email" />
+ADDRESS : <textarea rows ="5" cols="15" name ="address" id = "address"></textarea>
+          <input type = "submit" value = "Register!->" id ="mysubmit"/>
+</pre>
+</form>
+<script type ="text/javascript">
+
+<!-- ajax call when document is ready -->
+
+$(document).ready(function(){
+	$('#mySubmit').click(
+			alert("on click alert");
+	function(event){
+		var name    = $('#name').val();
+		var email   = $('#email').val();
+	    var address = $('#address').val();
+	    
+	    $.ajax({
+	    	type :"GET",
+	    	url  :"reg",
+	    	data : "name"+name+"&email"+email+"&address"+address,
+	    	success : function(msg)
+	    	{
+	    		alert("success");
+	    	},
+	    	error:function(e){
+	    		alert("fail");
+	    	}
+	    });
+	});
+});
+</script>
+</body>
+</html>

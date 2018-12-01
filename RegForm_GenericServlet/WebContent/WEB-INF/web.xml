@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+<display-name>RegForm_GenericServlet</display-name>
+<welcome-file-list>
+<welcome-file>RegistrationForm.html</welcome-file>
+</welcome-file-list>
+<servlet>
+<description></description>
+<display-name>RegFormServlet</display-name>
+<servlet-name>rf</servlet-name>
+<servlet-class>controller.RegFormServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>rf</servlet-name>
+<url-pattern>/reg</url-pattern>
+</servlet-mapping>
+</web-app>
