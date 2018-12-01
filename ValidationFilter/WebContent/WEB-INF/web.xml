@@ -4,7 +4,6 @@
     <welcome-file>index.html</welcome-file>
      </welcome-file-list>
      <servlet>
-     <display-name>tst</display-name>
           <servlet-name>StudentRegServlet</servlet-name>
      <servlet-class>controller.StudentRegServlet</servlet-class>
      </servlet>
