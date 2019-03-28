@@ -31,6 +31,7 @@ QUAL:<select name = "qual">
       }
      %>
 </select>
+<input type ="submit" value="Register"/>
 </pre>
 </form>
 <%
