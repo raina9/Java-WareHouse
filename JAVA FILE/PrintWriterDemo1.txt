@@ -1,0 +1,5 @@
+d100
+true
+c
+durga
+golu
