@@ -18,7 +18,7 @@ public class LinkedListDemo1 {
       System.out.println("3"+" "+l);
       l.removeLast();
       l.addFirst("ccc");
-      System.out.println(l);
+      System.out.println("4"+" "+l);
 	}
 
 }

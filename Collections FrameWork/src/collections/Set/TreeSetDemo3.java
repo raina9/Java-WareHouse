@@ -18,7 +18,8 @@ public class TreeSetDemo3{
 class MyComparator implements Comparator
 {  
   //for customised sorting we need to give implementation to comapre method
-  public int compare(Object obj1,Object obj2)
+  @Override
+public int compare(Object obj1,Object obj2)
   {
 		Integer I1 = (Integer)obj1;
 		Integer I2 = (Integer)obj2;

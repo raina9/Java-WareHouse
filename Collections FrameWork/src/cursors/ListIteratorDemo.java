@@ -18,7 +18,7 @@ public class ListIteratorDemo {
     // l.ListIterator() present in list interface to create ListIterator object of given collection
 	while(ltr.hasNext())//hasNext() checks for more element present
 	{
-     String s = (String)ltr.next();//if elements presents it gives element
+     String s = ltr.next();//if elements presents it gives element
                                    //TypeCasting is done to change the object into String Type
      if(s.equals("golu"))          
      {

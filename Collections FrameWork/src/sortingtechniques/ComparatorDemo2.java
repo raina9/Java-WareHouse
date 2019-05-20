@@ -15,19 +15,19 @@ public class ComparatorDemo2 {
     	   System.out.println(t);
 	}
 }
-      class MyComparator implements Comparator
+     class MyComparator implements Comparator
 	    {  
-    	  //for customised sorting we need to give implementation to comapre method
+    	  //for customized sorting we need to give implementation to compare method
     	  public int compare(Object obj1,Object obj2)
  	     {
  			Integer I1 = (Integer)obj1;
  			Integer I2 = (Integer)obj2;
  			if(I1<I2)
- 				return 1;
+ 			    return +1;
  			else if(I1>I2)
- 			    return -1;
+ 				return -1;
  			else
- 			    return 0;
- 	     }
+ 			return 0;
+ 		 }
 
 }
