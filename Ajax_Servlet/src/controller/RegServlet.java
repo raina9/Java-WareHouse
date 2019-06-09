@@ -15,16 +15,16 @@ public class RegServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		String name    = req.getParameter("name");
-	    String email   = req.getParameter("email");
-	    String address = req.getParameter("address");
-	  
-	  System.out.println(name);
-	  System.out.println(email);
-	  System.out.println(address);
-	  
-	  res.getWriter().println("success");
+
+		String name = req.getParameter("name");
+		String email = req.getParameter("email");
+		String address = req.getParameter("address");
+
+		System.out.println(name);
+		System.out.println(email);
+		System.out.println(address);
+
+		res.getWriter().println("success");
 	}
 
 }

@@ -1,21 +1,20 @@
 package objectclass.methods.equals;
+
 import java.util.*;
+
 /**
  * 
- * @author raina
- * Overriding .equals() method for content comparision
+ * @author raina Overriding .equals() method for content comparision
  */
-
 
 public class EqualsDemo1 {
 	String name;
-	int rollno ;
-	EqualsDemo1(String name,int rollno)
-	{
+	int rollno;
+
+	EqualsDemo1(String name, int rollno) {
 		this.name = name;
-		this.rollno=rollno;
-	}
-		 switch(int j)
+		this.rollno = rollno;
+	}switch(int j)
 	{
 		case 1:
 		{
@@ -24,26 +23,25 @@ public class EqualsDemo1 {
 		break;
      	case 2:
 	{
-	public boolean equals(Object obj)
-	{
-	String name1 = this.name;
-	int rollno1 = this.rollno;
-	//2nd object coming as argument needed to be typecasted
-	EqualsDemo1 e = (EqualsDemo1)obj;
-	String name2 = e.name;
-	int rollno2 = e.rollno;
-	if(name1.equals(name2)&&rollno1==rollno2)//rollno is primitive in nature
-	{
-		return true;
+
+	public boolean equals(Object obj) {
+		String name1 = this.name;
+		int rollno1 = this.rollno;
+		// 2nd object coming as argument needed to be typecasted
+		EqualsDemo1 e = (EqualsDemo1) obj;
+		String name2 = e.name;
+		int rollno2 = e.rollno;
+		if (name1.equals(name2) && rollno1 == rollno2)// rollno is primitive in nature
+		{
+			return true;
+		} else {
+			return false;
+		}
+		break;
 	}
-	else
-	{
-		return false;
-	}
-	break;
-	}
-	}
-	}
+
+	}}
+
 public static void main(String[] args)
    { 
 	EqualsDemo e1 = new EqualsDemo("golu",100);

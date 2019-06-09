@@ -11,13 +11,15 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/Logout")
 public class LogOutServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-   	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	    HttpSession session = request.getSession();
-	    String username = (String)session.getAttribute("username");
-	    String password = (String)session.getAttribute("password");
-	    System.out.println(username);
-	    System.out.println(password);
-	    session.invalidate();    
-   	} 
+		HttpSession session = request.getSession();
+		String username = (String) session.getAttribute("username");
+		String password = (String) session.getAttribute("password");
+		System.out.println(username);
+		System.out.println(password);
+		session.invalidate();
+	}
 }

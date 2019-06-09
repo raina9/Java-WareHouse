@@ -15,14 +15,13 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/next")
 public class HelloServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-     	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException 
-     	{
-     	PrintWriter out = res.getWriter();
+
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		PrintWriter out = res.getWriter();
 		// TODO Auto-generated method stub
-	    String name=req.getParameter("name");
-	    System.out.println("Next Servlet Execution");
-        out.println("Hello...Mr."+name);
-        
-     	}
+		String name = req.getParameter("name");
+		System.out.println("Next Servlet Execution");
+		out.println("Hello...Mr." + name);
+
+	}
 }
