@@ -9,6 +9,8 @@ public class GetClassDemo {
 		int count = 0;
 		// object ref. is used to hold Object as we don't know the type of object coming
 		Object o = new String("shivendra");
+	   
+		//public final class getClass()
 		Class c = o.getClass();
 		System.out.println("Fully Qualified ClassName" + " " + c.getName());
 		Method m[] = c.getDeclaredMethods();

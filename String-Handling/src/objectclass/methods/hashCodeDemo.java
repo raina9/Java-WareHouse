@@ -6,7 +6,7 @@ package objectclass.methods;
  */
 public class hashCodeDemo {
 	int i;
-
+	
 	public hashCodeDemo(int i) {
 		this.i = i;
 	}
@@ -22,6 +22,9 @@ public class hashCodeDemo {
 	/**
 	 * 3.Overriding hashCode() Method along with toString()
 	 */
+	
+	//public native int hashCode()
+	
 	public int hashCode() {
 		return i;
 	}

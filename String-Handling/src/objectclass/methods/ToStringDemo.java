@@ -23,6 +23,18 @@ public class ToStringDemo {
 	 * implementation of object class toString() method by JVM public class String
 	 * toString() { return getClass().getName()+"@"+toHexString(HashCode()); }
 	 */
+	
+	
+	/**
+	 * overriding ToString() Method
+	 * public String toString()
+	 */
+	  public String toString()
+	  {
+		return name+"--"+rollno;
+	  }
+	   
+	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		ToStringDemo s1 = new ToStringDemo("Shivendra", 101);
